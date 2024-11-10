@@ -1,9 +1,11 @@
 {
   "name": "app",
   "version": "1.0.50",
+  "module": "src/index.js",
   "scripts": {
     "start": "bun run src/index.ts",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun-vercel ./src/index.ts"
   },
   "dependencies": {
     "@consumet/extensions": "https://github.com/consumet/consumet.ts.git",
@@ -25,7 +27,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "bun-types": "latest"
-  },
-  "module": "src/index.js"
+    "bun-types": "latest",
+    "bun-vercel": "^1.0.0-alpha.4"
+  }
 }
